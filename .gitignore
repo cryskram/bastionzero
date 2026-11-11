@@ -1,0 +1,31 @@
+# Terraform local working data and state
+**/.terraform/*
+*.tfstate
+*.tfstate.*
+*.tfplan
+crash.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+provider-schema.json
+
+# Local credentials and secret inputs
+.env
+.env.*
+!.env.example
+terraform/terraform.tfvars
+terraform/secrets.tfvars
+ansible/**/vault.yml
+*.vault-pass
+vault-password*
+
+# SSH private keys and local runtime data
+*.pem
+id_ed25519
+id_rsa
+.direnv/
+.venv/
+.venv-ansible/
+__pycache__/
+*.retry

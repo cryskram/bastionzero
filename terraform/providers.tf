@@ -1,8 +1,8 @@
 provider "krutrim" {
     base_url = "https://cloud.olakrutrim.com"
-    account_id = "bastionzero"
-    access_key = "bastionzero"
-    secret_key = "bastionzero"
+    account_id = var.krutrim_account_id
+    access_key = var.krutrim_access_key
+    secret_key = var.krutrim_secret_key
 
     email = var.krutrim_email
     password = var.krutrim_password

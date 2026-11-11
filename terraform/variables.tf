@@ -57,6 +57,7 @@ variable "instance_type" {
 variable "image_krn" {
   description = "ubuntu image krn"
   type        = string
+  default = "ubuntu-24.04"
 }
 
 variable "root_volume_size" {
@@ -68,7 +69,7 @@ variable "root_volume_size" {
 variable "ssh_public_key_path" {
   description = "ssh public key path to use for bastionzero instance"
   type        = string
-  default     = "~/.ssh/bastionzero.pub"
+  default     = "~/.ssh/id_rsa_bastionzero.pub"
 }
 
 variable "bootstrap_ssh_cidr" {

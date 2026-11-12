@@ -1,4 +1,5 @@
 resource "krutrim_vpc" "main" {
+  description = "vpc setup for krutrim"
   region = var.region
   name = "bastionzero-vpc"
   network_name = "bastionzero-network"

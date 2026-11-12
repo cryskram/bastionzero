@@ -1,0 +1,6 @@
+region              = "In-Bangalore-1"
+instance_type       = "CPU-1x-4GB"
+image_krn           = "REPLACE_WITH_REAL_UBUNTU_IMAGE_KRN"
+root_volume_size    = 20
+ssh_public_key_path = "~/.ssh/bastionzero.pub"
+bootstrap_ssh_cidr  = "REPLACE_WITH_YOUR_PUBLIC_IPV4/32"

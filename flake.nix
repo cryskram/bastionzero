@@ -25,12 +25,15 @@
           default = pkgs.mkShellNoCC {
             packages = with pkgs; [
               terraform
-              python313
-              uv
               tflint
               jq
               graphviz
+              google-cloud-sdk
               just
+              ansible
+              go
+              gopls
+              golangci-lint
               sops
               age
               openssh
@@ -38,8 +41,15 @@
               nixfmt
             ];
             shellHook = ''
-              echo "bastionzero IaC dev shell"
-              echo "terraform version: $(terraform version | head -n 1)"
+              echo "BastionZero GCP development shell"
+              export PATH="$HOME/.local/bin:$PATH"
+              echo "gcloud: $(gcloud version 2>/dev/null | head -n1)"
+              echo "Go: $(go version)"
+              if command -v terraform >/dev/null 2>&1; then
+                echo "Terraform: $(terraform version | head -n1)"
+              else
+                echo "Terraform: not installed yet; run scripts/install-terraform.sh"
+              fi
             '';
           };
         }

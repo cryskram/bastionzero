@@ -1,10 +1,15 @@
-provider "krutrim" {
-    base_url = "https://cloud.olakrutrim.com"
-    account_id = var.krutrim_account_id
-    access_key = var.krutrim_access_key
-    secret_key = var.krutrim_secret_key
+terraform {
+  required_version = ">= 1.17.2, < 2.0.0"
+  required_providers {
+    google = {
+      source  = "hasicorp/google"
+      version = "~> 8.11.0"
+    }
+  }
+}
 
-    email = var.krutrim_email
-    password = var.krutrim_password
-    is_root_user = var.krutrim_is_root_user
+provider "google" {
+  project = var.project_id
+  region  = var.region
+  zone    = var.zone
 }

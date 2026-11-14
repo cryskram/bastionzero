@@ -1,0 +1,5 @@
+project_id         = "bastionzero-lab"
+admin_email        = "YOUR_GOOGLE_ACCOUNT_EMAIL"
+region             = "us-central1"
+zone               = "us-central1-a"
+enable_public_web  = false
